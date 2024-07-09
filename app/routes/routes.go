@@ -9,4 +9,5 @@ import (
 func InitRoute(){
 	http.HandleFunc("/home", handlers.HomeRender)
 	http.HandleFunc("/create", handlers.CreateRender)
+	http.HandleFunc("/generate", handlers.GenerateCV)
 }
