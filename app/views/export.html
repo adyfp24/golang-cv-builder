@@ -1,11 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Go - resume</title>
+    <title>CV Builder - Create</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    export page
+    <section id="main" style="font-family: 'Poppins', sans-serif; background: rgb(45,194,253);
+    background: radial-gradient(circle, rgba(45,194,253,1) 0%, rgba(34,76,195,1) 100%);" class="h-screen text-white">
+    <div class="px-6 py-6">
+        <h1 class="font-bold text-3xl">Create Your CV 🔍</h1>
+        <p class="my-3">Please fill the field with your current condition, make sure you have choice a correct sentences and paragraph so recruiter can your potential clearly</p>
+        <section id="personal" class="w-1/2 h-full bg-red-300">
+            <h3>Personal details</h3>
+            <form action="/generate" method="post">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+    
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+    
+                <label for="phone">Phone:</label><br>
+                <input type="text" id="phone" name="phone" required><br><br>
+    
+                <label for="experience">Experience:</label><br>
+                <textarea id="experience" name="experience" required></textarea><br><br>
+    
+                <label for="education">Education:</label><br>
+                <textarea id="education" name="education" required></textarea><br><br>
+    
+                <input type="submit" value="Generate CV">
+            </form>
+        </section>
+    </div>
+    </section>
 </body>
+
 </html>
