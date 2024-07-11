@@ -9,9 +9,9 @@
 
 <body>
     <section id="main" style="font-family: 'Poppins', sans-serif; background: rgb(45,194,253);
-    background: radial-gradient(circle, rgba(45,194,253,1) 0%, rgba(34,76,195,1) 100%);" class="h-screen text-white">
+    background: radial-gradient(circle, rgba(45,194,253,1) 0%, rgba(34,76,195,1) 100%);" class="text-white ">
         <div class="px-6 py-6">
-            <h1 class="font-bold text-3xl">Create Your CV 🔍</h1>
+            <h1 class="text-3xl font-bold">Create Your CV 🔍</h1>
             <p class="my-3">Please fill the field with your current condition, make sure you have choice a correct
                 sentences and paragraph so recruiter can your potential clearly</p>
             <section id="field-data" class="pt-3">
@@ -24,31 +24,31 @@
                 backdrop-filter: blur(9.6px);
                 -webkit-backdrop-filter: blur(9.6px);
                 border: 1px solid rgba(255, 255, 255, 0.31);" class="w-1/3 h-full px-3 py-3">
-                        <h3 class="font-semibold text-lg italic">Personal details</h3>
-                        <form class="text-black flex justify-between" action="/generate" method="post">
+                        <h3 class="text-lg italic font-semibold">Personal details</h3>
+                        <form class="flex justify-between text-black" action="/generate" method="post">
                             <div>
                                 <label for="firstname">First name :</label><br>
-                                <input class="rounded px-1 py-1" type="text" id="firstname" name="firstname"
+                                <input class="px-1 py-1 rounded" type="text" id="firstname" name="firstname"
                                     required><br><br>
                                 <label for="lastname">Last name :</label><br>
-                                <input class="rounded px-1 py-1" type="text" id="lastname" name="lastname"
+                                <input class="px-1 py-1 rounded" type="text" id="lastname" name="lastname"
                                     required><br><br>
 
                                 <label for="email">Email :</label><br>
-                                <input class="rounded px-1 py-1" type="email" id="email" name="email" required><br><br>
+                                <input class="px-1 py-1 rounded" type="email" id="email" name="email" required><br><br>
 
                             </div>
                             <div>
 
                                 <label for="phone">Phone :</label><br>
-                                <input class="rounded px-1 py-1" type="text" id="phone" name="phone" required><br><br>
+                                <input class="px-1 py-1 rounded" type="text" id="phone" name="phone" required><br><br>
 
                                 <label for="city">City :</label><br>
-                                <input class="rounded px-1 py-1" type="text" id="city" name="city" required><br><br>
+                                <input class="px-1 py-1 rounded" type="text" id="city" name="city" required><br><br>
 
 
                                 <label for="linkedin">LinkedIn profile :</label><br>
-                                <input class="rounded px-1 py-1" id="linkedin" name="linkedin" required><br><br>
+                                <input class="px-1 py-1 rounded" id="linkedin" name="linkedin" required><br><br>
                             </div>
 
 
@@ -61,16 +61,88 @@
                 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
                 backdrop-filter: blur(9.6px);
                 -webkit-backdrop-filter: blur(9.6px);
-                border: 1px solid rgba(255, 255, 255, 0.31);" class="w-2/3 ml-4 h-full px-3 py-3 pb-8">
-                        <h3 class="font-semibold mb-5 text-lg italic">Objective or profesional summary</h3>
-                        <form class="text-black flex justify-between" action="/generate" method="post">
-                            <textarea placeholder="write your professional summary here..." name="objective" id="objective" rows="8" class=" px-1 py-1 rounded-lg w-full" ></textarea>
+                border: 1px solid rgba(255, 255, 255, 0.31);" class="w-2/3 h-full px-3 py-3 pb-8 ml-4">
+                        <h3 class="mb-5 text-lg italic font-semibold">Objective or profesional summary</h3>
+                        <form class="flex justify-between text-black" action="/generate" method="post">
+                            <textarea placeholder="write your professional summary here..." name="objective"
+                                id="objective" rows="8" class="w-full px-1 py-1 rounded-lg "></textarea>
                         </form>
                     </section>
 
                 </div>
+
+                <section id="education" style=" background: rgba(255, 255, 255, 0.39);
+                border-radius: 16px;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(9.6px);
+                -webkit-backdrop-filter: blur(9.6px);
+                border: 1px solid rgba(255, 255, 255, 0.31);" class="w-full h-full px-3 py-3 pb-8 mt-5">
+                    <h3 class="mb-5 text-lg italic font-semibold">Education</h3>
+                    <form class="flex justify-between text-black" action="/generate" method="post">
+                        <textarea placeholder="write your education here..." name="education" id="objective" rows="8"
+                            class="w-full px-1 py-1 rounded-lg "></textarea>
+                    </form>
+                </section>
+
+                <section id="work-experience" style=" background: rgba(255, 255, 255, 0.39);
+                border-radius: 16px;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(9.6px);
+                -webkit-backdrop-filter: blur(9.6px);
+                border: 1px solid rgba(255, 255, 255, 0.31);" class="w-full h-full px-3 py-3 pb-8 mt-5">
+                    <h3 class="mb-5 text-lg italic font-semibold">Work Experience</h3>
+                    <form class="flex justify-between text-black" action="/generate" method="post">
+                        <textarea placeholder="write your work experience here..." name="work-experience"
+                            id="work-experience" rows="8" class="w-full px-1 py-1 rounded-lg "></textarea>
+                    </form>
+                </section>
+
+                <section id="organization" style=" background: rgba(255, 255, 255, 0.39);
+                border-radius: 16px;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(9.6px);
+                -webkit-backdrop-filter: blur(9.6px);
+                border: 1px solid rgba(255, 255, 255, 0.31);" class="w-full h-full px-3 py-3 pb-8 mt-5">
+                    <h3 class="mb-5 text-lg italic font-semibold">Organization or volunteer experience</h3>
+                    <form class="flex justify-between text-black" action="/generate" method="post">
+                        <textarea placeholder="write your work organization or volunteer experience here..."
+                            name="organization-experience" id="organization-experience" rows="8"
+                            class="w-full px-1 py-1 rounded-lg "></textarea>
+                    </form>
+                </section>
+
+                <section id="certification" style=" background: rgba(255, 255, 255, 0.39);
+                border-radius: 16px;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(9.6px);
+                -webkit-backdrop-filter: blur(9.6px);
+                border: 1px solid rgba(255, 255, 255, 0.31);" class="w-full h-full px-3 py-3 pb-8 mt-5">
+                    <h3 class="mb-5 text-lg italic font-semibold">Certification</h3>
+                    <form class="flex justify-between text-black" action="/generate" method="post">
+                        <textarea placeholder="write your certification here..." name="certification" id="certification"
+                            rows="8" class="w-full px-1 py-1 rounded-lg "></textarea>
+                    </form>
+                </section>
+
+                <section id="achievement" style=" background: rgba(255, 255, 255, 0.39);
+                border-radius: 16px;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(9.6px);
+                -webkit-backdrop-filter: blur(9.6px);
+                border: 1px solid rgba(255, 255, 255, 0.31);" class="w-full h-full px-3 py-3 pb-8 mt-5">
+                    <h3 class="mb-5 text-lg italic font-semibold">Achievement and honor</h3>
+                    <form class="flex justify-between text-black" action="/generate" method="post">
+                        <textarea placeholder="write your certification here..." name="achievement" id="achievement"
+                            rows="8" class="w-full px-1 py-1 rounded-lg "></textarea>
+                    </form>
+                </section>
+                
             </section>
-    </section>
+            
+            <section id="button-section" class="flex items-center justify-end mt-6 mb-10">
+                <button class="px-6 py-3 mx-2 text-xl font-semibold text-white bg-blue-400 hover:bg-blue-600 rounded-2xl">preview</button>
+                <button class="px-6 py-3 mx-2 text-xl font-semibold text-white bg-blue-400 hover:bg-blue-600 rounded-2xl">export</button>
+            </section>
     </div>
     </section>
 </body>
