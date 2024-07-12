@@ -25,3 +25,13 @@ func CreateRender(w http.ResponseWriter, r *http.Request){
 	tmpl.Execute(w, nil)
 }
 
+func ExampleRender(w http.ResponseWriter, r *http.Request){
+	if r.Method != http.MethodGet {
+		http.Error(w, "Invalid request method", http.StatusMethodNotAllowed)
+        return
+	}
+
+	tmpl := template.Must(template.ParseFiles("app/views/example.html"))
+	tmpl.Execute(w, nil)
+}
+

@@ -12,7 +12,6 @@ func GenerateCV(w http.ResponseWriter, r *http.Request) {
         return
     }
 
-    // Ambil data dari form
     r.ParseForm()
     cv := models.Resume{
         Name:       r.Form.Get("name"),
@@ -22,14 +21,12 @@ func GenerateCV(w http.ResponseWriter, r *http.Request) {
         Education:  r.Form.Get("education"),
     }
 
-    // Generate PDF CV
     pdfBytes, err := services.GeneratePDF(cv)
     if err != nil {
         http.Error(w, "Failed to generate PDF", http.StatusInternalServerError)
         return
     }
 
-    // Kirim PDF sebagai response
     w.Header().Set("Content-Type", "application/pdf")
     w.Header().Set("Content-Disposition", "attachment; filename=cv.pdf")
     w.Write(pdfBytes)

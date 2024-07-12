@@ -11,11 +11,9 @@ func GeneratePDF(cv models.Resume) ([]byte, error) {
     pdf := gofpdf.New("P", "mm", "A4", "")
     pdf.AddPage()
 
-    // Judul CV
     pdf.SetFont("Arial", "B", 16)
     pdf.CellFormat(0, 10, "Curriculum Vitae", "", 1, "C", false, 0, "")
 
-    // Informasi Pribadi
     pdf.SetFont("Arial", "", 12)
     pdf.CellFormat(0, 10, "Personal Information", "", 1, "L", false, 0, "")
     pdf.Ln(5)
@@ -24,7 +22,6 @@ func GeneratePDF(cv models.Resume) ([]byte, error) {
     pdf.CellFormat(0, 10, "Phone: "+cv.Phone, "", 1, "L", false, 0, "")
     pdf.Ln(10)
 
-    // Pengalaman dan Pendidikan
     pdf.CellFormat(0, 10, "Experience", "", 1, "L", false, 0, "")
     pdf.MultiCell(0, 10, cv.Experience, "", "L", false)
     pdf.Ln(10)
