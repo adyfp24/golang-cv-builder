@@ -17,6 +17,8 @@ func main() {
 		log.Fatal("PORT must be set")
 	}
 
+	http.Handle("/public/", http.StripPrefix("/public/", http.FileServer(http.Dir("public"))))
+
 	log.Printf("Server is running on port %s", port)
 	log.Fatal(http.ListenAndServe(":"+port, nil))
 }
