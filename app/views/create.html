@@ -14,135 +14,129 @@
             <h1 class="text-3xl font-bold">Create Your CV 🔍</h1>
             <p class="my-3">Please fill the field with your current condition, make sure you have choice a correct
                 sentences and paragraph so recruiter can see your potential</p>
-            <section id="field-data" class="pt-3">
-                <div class="flex">
-                    <section id="personal" style="
-                background: rgba(255, 255, 255, 0.39);
-                border-radius: 16px;
-                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-                backdrop-filter: blur(9.6px);
-                -webkit-backdrop-filter: blur(9.6px);
-                border: 1px solid rgba(255, 255, 255, 0.31);" class="w-1/3 h-full px-3 py-3">
-                        <h3 class="text-lg italic font-semibold">Personal details</h3>
-                        <form class="flex justify-between text-gray-300" action="/generate" method="post">
-                            <div>
-                                <label for="firstname">First name :</label><br>
-                                <input class="px-1 py-1 rounded" type="text" id="firstname" name="firstname"
-                                    required><br><br>
-                                <label for="lastname">Last name :</label><br>
-                                <input class="px-1 py-1 rounded" type="text" id="lastname" name="lastname"
-                                    required><br><br>
-
-                                <label for="email">Email :</label><br>
-                                <input class="px-1 py-1 rounded" type="email" id="email" name="email" required><br><br>
-
+            <form action="/generate" method="post">
+                <section id="field-data" class="pt-3">
+                    <div class="flex">
+                        <section id="personal" style="
+                    background: rgba(255, 255, 255, 0.39);
+                    border-radius: 16px;
+                    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                    backdrop-filter: blur(9.6px);
+                    -webkit-backdrop-filter: blur(9.6px);
+                    border: 1px solid rgba(255, 255, 255, 0.31);" class="w-1/3 h-full px-3 py-3">
+                            <h3 class="text-lg italic font-semibold">Personal details</h3>
+                            <div class="flex justify-between text-gray-300">
+                                <div>
+                                    <label for="firstname">First name :</label><br>
+                                    <input class="px-1 py-1 rounded" type="text" id="firstname" name="firstname"
+                                        required><br><br>
+                                    <label for="lastname">Last name :</label><br>
+                                    <input class="px-1 py-1 rounded" type="text" id="lastname" name="lastname"
+                                        required><br><br>
+                                    <label for="email">Email :</label><br>
+                                    <input class="px-1 py-1 rounded" type="email" id="email" name="email" required><br><br>
+                                </div>
+                                <div>
+                                    <label for="phone">Phone :</label><br>
+                                    <input class="px-1 py-1 rounded" type="text" id="phone" name="phone" required><br><br>
+                                    <label for="city">City :</label><br>
+                                    <input class="px-1 py-1 rounded" type="text" id="city" name="city" required><br><br>
+                                    <label for="linkedin">LinkedIn profile :</label><br>
+                                    <input class="px-1 py-1 rounded" id="linkedin" name="linkedin" required><br><br>
+                                </div>
                             </div>
-                            <div>
+                        </section>
 
-                                <label for="phone">Phone :</label><br>
-                                <input class="px-1 py-1 rounded" type="text" id="phone" name="phone" required><br><br>
-
-                                <label for="city">City :</label><br>
-                                <input class="px-1 py-1 rounded" type="text" id="city" name="city" required><br><br>
-
-
-                                <label for="linkedin">LinkedIn profile :</label><br>
-                                <input class="px-1 py-1 rounded" id="linkedin" name="linkedin" required><br><br>
+                        <section id="objective" style="
+                    background: rgba(255, 255, 255, 0.39);
+                    border-radius: 16px;
+                    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                    backdrop-filter: blur(9.6px);
+                    -webkit-backdrop-filter: blur(9.6px);
+                    border: 1px solid rgba(255, 255, 255, 0.31);" class="w-2/3 h-full px-3 py-3 pb-8 ml-4">
+                            <h3 class="mb-5 text-lg italic font-semibold">Objective or profesional summary</h3>
+                            <div class="flex justify-between text-black">
+                                <textarea placeholder="write your professional summary here..." name="objective"
+                                    id="objective" rows="8" class="w-full px-1 py-1 rounded-lg "></textarea>
                             </div>
+                        </section>
 
+                    </div>
 
-                        </form>
+                    <section id="education" style=" background: rgba(255, 255, 255, 0.39);
+                    border-radius: 16px;
+                    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                    backdrop-filter: blur(9.6px);
+                    -webkit-backdrop-filter: blur(9.6px);
+                    border: 1px solid rgba(255, 255, 255, 0.31);" class="w-full h-full px-3 py-3 pb-8 mt-5">
+                        <h3 class="mb-5 text-lg italic font-semibold">Education</h3>
+                        <div class="flex justify-between text-black">
+                            <textarea placeholder="write your education here..." name="education" id="education" rows="8"
+                                class="w-full px-1 py-1 rounded-lg "></textarea>
+                        </div>
                     </section>
 
-                    <section id="objective" style="
-                background: rgba(255, 255, 255, 0.39);
-                border-radius: 16px;
-                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-                backdrop-filter: blur(9.6px);
-                -webkit-backdrop-filter: blur(9.6px);
-                border: 1px solid rgba(255, 255, 255, 0.31);" class="w-2/3 h-full px-3 py-3 pb-8 ml-4">
-                        <h3 class="mb-5 text-lg italic font-semibold">Objective or profesional summary</h3>
-                        <form class="flex justify-between text-black" action="/generate" method="post">
-                            <textarea placeholder="write your professional summary here..." name="objective"
-                                id="objective" rows="8" class="w-full px-1 py-1 rounded-lg "></textarea>
-                        </form>
+                    <section id="work-experience" style=" background: rgba(255, 255, 255, 0.39);
+                    border-radius: 16px;
+                    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                    backdrop-filter: blur(9.6px);
+                    -webkit-backdrop-filter: blur(9.6px);
+                    border: 1px solid rgba(255, 255, 255, 0.31);" class="w-full h-full px-3 py-3 pb-8 mt-5">
+                        <h3 class="mb-5 text-lg italic font-semibold">Work Experience</h3>
+                        <div class="flex justify-between text-black">
+                            <textarea placeholder="write your work experience here..." name="work-experience"
+                                id="work-experience" rows="8" class="w-full px-1 py-1 rounded-lg "></textarea>
+                        </div>
                     </section>
 
-                </div>
+                    <section id="organization" style=" background: rgba(255, 255, 255, 0.39);
+                    border-radius: 16px;
+                    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                    backdrop-filter: blur(9.6px);
+                    -webkit-backdrop-filter: blur(9.6px);
+                    border: 1px solid rgba(255, 255, 255, 0.31);" class="w-full h-full px-3 py-3 pb-8 mt-5">
+                        <h3 class="mb-5 text-lg italic font-semibold">Organization or volunteer experience</h3>
+                        <div class="flex justify-between text-black">
+                            <textarea placeholder="write your work organization or volunteer experience here..."
+                                name="organization-experience" id="organization-experience" rows="8"
+                                class="w-full px-1 py-1 rounded-lg "></textarea>
+                        </div>
+                    </section>
 
-                <section id="education" style=" background: rgba(255, 255, 255, 0.39);
-                border-radius: 16px;
-                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-                backdrop-filter: blur(9.6px);
-                -webkit-backdrop-filter: blur(9.6px);
-                border: 1px solid rgba(255, 255, 255, 0.31);" class="w-full h-full px-3 py-3 pb-8 mt-5">
-                    <h3 class="mb-5 text-lg italic font-semibold">Education</h3>
-                    <form class="flex justify-between text-black" action="/generate" method="post">
-                        <textarea placeholder="write your education here..." name="education" id="objective" rows="8"
-                            class="w-full px-1 py-1 rounded-lg "></textarea>
-                    </form>
+                    <section id="certification" style=" background: rgba(255, 255, 255, 0.39);
+                    border-radius: 16px;
+                    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                    backdrop-filter: blur(9.6px);
+                    -webkit-backdrop-filter: blur(9.6px);
+                    border: 1px solid rgba(255, 255, 255, 0.31);" class="w-full h-full px-3 py-3 pb-8 mt-5">
+                        <h3 class="mb-5 text-lg italic font-semibold">Certification</h3>
+                        <div class="flex justify-between text-black">
+                            <textarea placeholder="write your certification here..." name="certification" id="certification"
+                                rows="8" class="w-full px-1 py-1 rounded-lg "></textarea>
+                        </div>
+                    </section>
+
+                    <section id="achievement" style=" background: rgba(255, 255, 255, 0.39);
+                    border-radius: 16px;
+                    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                    backdrop-filter: blur(9.6px);
+                    -webkit-backdrop-filter: blur(9.6px);
+                    border: 1px solid rgba(255, 255, 255, 0.31);" class="w-full h-full px-3 py-3 pb-8 mt-5">
+                        <h3 class="mb-5 text-lg italic font-semibold">Achievement and honor</h3>
+                        <div class="flex justify-between text-black">
+                            <textarea placeholder="write your achievement here..." name="achievement" id="achievement"
+                                rows="8" class="w-full px-1 py-1 rounded-lg "></textarea>
+                        </div>
+                    </section>
+
                 </section>
 
-                <section id="work-experience" style=" background: rgba(255, 255, 255, 0.39);
-                border-radius: 16px;
-                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-                backdrop-filter: blur(9.6px);
-                -webkit-backdrop-filter: blur(9.6px);
-                border: 1px solid rgba(255, 255, 255, 0.31);" class="w-full h-full px-3 py-3 pb-8 mt-5">
-                    <h3 class="mb-5 text-lg italic font-semibold">Work Experience</h3>
-                    <form class="flex justify-between text-black" action="/generate" method="post">
-                        <textarea placeholder="write your work experience here..." name="work-experience"
-                            id="work-experience" rows="8" class="w-full px-1 py-1 rounded-lg "></textarea>
-                    </form>
+                <section id="button-section" class="flex items-center justify-end mt-6 mb-10">
+                    <button type="button" class="px-6 py-3 mx-2 text-xl font-semibold text-white bg-blue-400 hover:bg-blue-600 rounded-2xl">Preview</button>
+                    <button type="submit" class="px-6 py-3 mx-2 text-xl font-semibold text-white bg-blue-400 hover:bg-blue-600 rounded-2xl">Export</button>
                 </section>
-
-                <section id="organization" style=" background: rgba(255, 255, 255, 0.39);
-                border-radius: 16px;
-                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-                backdrop-filter: blur(9.6px);
-                -webkit-backdrop-filter: blur(9.6px);
-                border: 1px solid rgba(255, 255, 255, 0.31);" class="w-full h-full px-3 py-3 pb-8 mt-5">
-                    <h3 class="mb-5 text-lg italic font-semibold">Organization or volunteer experience</h3>
-                    <form class="flex justify-between text-black" action="/generate" method="post">
-                        <textarea placeholder="write your work organization or volunteer experience here..."
-                            name="organization-experience" id="organization-experience" rows="8"
-                            class="w-full px-1 py-1 rounded-lg "></textarea>
-                    </form>
-                </section>
-
-                <section id="certification" style=" background: rgba(255, 255, 255, 0.39);
-                border-radius: 16px;
-                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-                backdrop-filter: blur(9.6px);
-                -webkit-backdrop-filter: blur(9.6px);
-                border: 1px solid rgba(255, 255, 255, 0.31);" class="w-full h-full px-3 py-3 pb-8 mt-5">
-                    <h3 class="mb-5 text-lg italic font-semibold">Certification</h3>
-                    <form class="flex justify-between text-black" action="/generate" method="post">
-                        <textarea placeholder="write your certification here..." name="certification" id="certification"
-                            rows="8" class="w-full px-1 py-1 rounded-lg "></textarea>
-                    </form>
-                </section>
-
-                <section id="achievement" style=" background: rgba(255, 255, 255, 0.39);
-                border-radius: 16px;
-                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-                backdrop-filter: blur(9.6px);
-                -webkit-backdrop-filter: blur(9.6px);
-                border: 1px solid rgba(255, 255, 255, 0.31);" class="w-full h-full px-3 py-3 pb-8 mt-5">
-                    <h3 class="mb-5 text-lg italic font-semibold">Achievement and honor</h3>
-                    <form class="flex justify-between text-black" action="/generate" method="post">
-                        <textarea placeholder="write your achievement here..." name="achievement" id="achievement"
-                            rows="8" class="w-full px-1 py-1 rounded-lg "></textarea>
-                    </form>
-                </section>
-                
-            </section>
-            
-            <section id="button-section" class="flex items-center justify-end mt-6 mb-10">
-                <button class="px-6 py-3 mx-2 text-xl font-semibold text-white bg-blue-400 hover:bg-blue-600 rounded-2xl">preview</button>
-                <button class="px-6 py-3 mx-2 text-xl font-semibold text-white bg-blue-400 hover:bg-blue-600 rounded-2xl">export</button>
-            </section>
-    </div>
+            </form>
+        </div>
     </section>
 </body>
 

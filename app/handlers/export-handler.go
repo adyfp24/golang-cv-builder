@@ -14,11 +14,17 @@ func GenerateCV(w http.ResponseWriter, r *http.Request) {
 
     r.ParseForm()
     cv := models.Resume{
-        Name:       r.Form.Get("name"),
+        FirstName:       r.Form.Get("firstname"),
+        LastName:       r.Form.Get("lastname"),
         Email:      r.Form.Get("email"),
         Phone:      r.Form.Get("phone"),
-        Experience: r.Form.Get("experience"),
+        Linkedin:      r.Form.Get("linkedin"),
+        Objective:      r.Form.Get("objective"),
+        WorkExperience: r.Form.Get("work-experience"),
+        OrganizationExperience: r.Form.Get("organization-experience"),
         Education:  r.Form.Get("education"),
+        Certification:  r.Form.Get("certification"),
+        Achievement:  r.Form.Get("achievement"),
     }
 
     pdfBytes, err := services.GeneratePDF(cv)
