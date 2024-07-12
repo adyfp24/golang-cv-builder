@@ -7,17 +7,60 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <title>CV Builder - Create</title>
+    <style>
+        .selected {
+            border: 6px solid rgba(34, 76, 195, 1);
+            box-shadow: 0 0 10px rgba(34, 76, 195, 0.8), 0 0 20px rgba(34, 76, 195, 0.6), 0 0 30px rgba(34, 76, 195, 0.4);
+        }
+    </style>
 </head>
 
 <body>
     <section id="main" style="font-family: 'Poppins', sans-serif; background: rgb(45,194,253);
-    background: radial-gradient(circle, rgba(45,194,253,1) 0%, rgba(34,76,195,1) 100%);" class="h-screen text-white ">
+    background: radial-gradient(circle, rgba(45,194,253,1) 0%, rgba(34,76,195,1) 100%);" class="px-6 py-6 text-white">
         <div id="header">
             <h1 class="text-3xl font-bold">📚 Resume example</h1>
-            <p>This is any example from CV that generated with this CV builder </p>
-
+            <p class="my-3">This is some example from CV that generated with this CV builder</p>
+        </div>
+        <div id="resume" class="flex">
+            <div class="w-2/4 h-full container-1">
+                <h3 class="mb-3 text-2xl font-bold">Collection :</h3>
+                <div id="small-card" class="flex"
+                    style="background: rgba(255, 255, 255, 0.39); border-radius: 10px; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(9.6px); -webkit-backdrop-filter: blur(9.6px); border: 1px solid rgba(255, 255, 255, 0.31);">
+                    <div class="w-1/2 px-3 py-3 card">
+    
+                        <img class="w-full cursor-pointer selected" src="../../public/img/cv.jpg" alt="my cv">
+                    </div>
+                    <div class="w-1/2 px-3 py-3 card">
+                        <img class="w-full cursor-pointer" src="../../public/img/cv-2.jpg" alt="my cv">
+                    </div>
+                </div>
+            </div>
+            <div class="w-2/4 container-2">
+                <h3 class="mb-3 ml-6 text-2xl font-bold">Full Preview :</h3>
+                <div id="zoom-card" class="px-3 py-3 ml-6 card"
+                    style="background: rgba(255, 255, 255, 0.39); border-radius: 10px; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); backdrop-filter: blur(9.6px); -webkit-backdrop-filter: blur(9.6px); border: 1px solid rgba(255, 255, 255, 0.31);">
+                    <img class="w-full cursor-pointer" src="../../public/img/cv.jpg" alt="my cv">
+                </div>
+            </div>
         </div>
     </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const smallCardImages = document.querySelectorAll('#small-card img');
+            const zoomCardImage = document.querySelector('#zoom-card img');
+
+            smallCardImages.forEach(img => {
+                img.addEventListener('click', function () {
+                    smallCardImages.forEach(img => img.classList.remove('selected'));
+                    this.classList.add('selected');
+                    zoomCardImage.src = this.src;
+                });
+            });
+        });
+    </script>
+
 </body>
 
 </html>

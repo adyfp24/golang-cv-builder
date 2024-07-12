@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"net/http"
 
@@ -13,12 +12,10 @@ func main() {
 	routes.InitRoute()
 	config.LoadConfig()
 	port := config.GetEnv("SERVER_PORT")
+
 	if port == "" {
 		log.Fatal("PORT must be set")
 	}
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, "resume builder with go")
-	})
 
 	log.Printf("Server is running on port %s", port)
 	log.Fatal(http.ListenAndServe(":"+port, nil))

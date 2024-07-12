@@ -7,7 +7,7 @@ import (
 )
 
 func InitRoute(){
-	http.HandleFunc("/home", handlers.HomeRender)
+	http.HandleFunc("/", handlers.HomeRender)
 	http.HandleFunc("/create", handlers.CreateRender)
 	http.HandleFunc("/example", handlers.ExampleRender)
 	http.HandleFunc("/generate", handlers.GenerateCV)
