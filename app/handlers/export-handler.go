@@ -4,6 +4,7 @@ import (
 	"github.com/adyfp24/golang-cv-builder/app/models"
 	"github.com/adyfp24/golang-cv-builder/app/services"
 	"net/http"
+	"strings"
 )
 
 func GenerateCV(w http.ResponseWriter, r *http.Request) {
@@ -14,7 +15,7 @@ func GenerateCV(w http.ResponseWriter, r *http.Request) {
 
 	r.ParseForm()
 	cv := models.Resume{
-		Fullname:               r.Form.Get("fullname"),
+		Fullname:               strings.ToUpper(r.Form.Get("fullname")),
 		Portofolio:             r.Form.Get("portofolio"),
 		Email:                  r.Form.Get("email"),
 		Phone:                  r.Form.Get("phone"),
