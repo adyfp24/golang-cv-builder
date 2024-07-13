@@ -25,24 +25,24 @@
                     -webkit-backdrop-filter: blur(9.6px);
                     border: 1px solid rgba(255, 255, 255, 0.31);" class="w-1/3 h-full px-3 py-3">
                             <h3 class="text-lg italic font-semibold">Personal details</h3>
-                            <div class="flex justify-between text-gray-300">
+                            <div class="flex justify-between">
                                 <div>
-                                    <label for="firstname">First name :</label><br>
-                                    <input class="px-1 py-1 rounded" type="text" id="firstname" name="firstname"
+                                    <label class="text-gray-300 " for="fullname">Full name :</label><br>
+                                    <input class="px-1 py-1 rounded" type="text" id="fullname" name="fullname"
                                         required><br><br>
-                                    <label for="lastname">Last name :</label><br>
-                                    <input class="px-1 py-1 rounded" type="text" id="lastname" name="lastname"
-                                        required><br><br>
-                                    <label for="email">Email :</label><br>
+                                        <label class="text-gray-300 " for="phone">Phone :</label><br>
+                                        <input class="px-1 py-1 rounded" type="text" id="phone" name="phone" required><br><br>
+                                    <label class="text-gray-300 "  for="email">Email :</label><br>
                                     <input class="px-1 py-1 rounded" type="email" id="email" name="email" required><br><br>
                                 </div>
                                 <div>
-                                    <label for="phone">Phone :</label><br>
-                                    <input class="px-1 py-1 rounded" type="text" id="phone" name="phone" required><br><br>
-                                    <label for="city">City :</label><br>
+                                    <label class="text-gray-300 "  for="city">City :</label><br>
                                     <input class="px-1 py-1 rounded" type="text" id="city" name="city" required><br><br>
-                                    <label for="linkedin">LinkedIn profile :</label><br>
+                                    <label class="text-gray-300 "  for="linkedin">LinkedIn profile :</label><br>
                                     <input class="px-1 py-1 rounded" id="linkedin" name="linkedin" required><br><br>
+                                    <label class="text-gray-300 "  for="portofolio">Portfolio url :</label><br>
+                                    <input class="px-1 py-1 rounded" type="text" id="portofolio" name="portofolio"
+                                        required><br><br>
                                 </div>
                             </div>
                         </section>
@@ -73,6 +73,19 @@
                         <div class="flex justify-between text-black">
                             <textarea placeholder="write your education here..." name="education" id="education" rows="8"
                                 class="w-full px-1 py-1 rounded-lg "></textarea>
+                        </div>
+                    </section>
+
+                    <section id="work-experience" style=" background: rgba(255, 255, 255, 0.39);
+                    border-radius: 16px;
+                    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                    backdrop-filter: blur(9.6px);
+                    -webkit-backdrop-filter: blur(9.6px);
+                    border: 1px solid rgba(255, 255, 255, 0.31);" class="w-full h-full px-3 py-3 pb-8 mt-5">
+                        <h3 class="mb-5 text-lg italic font-semibold">Skills</h3>
+                        <div class="flex justify-between text-black">
+                            <textarea placeholder="write your work experience here..." name="skill"
+                                id="skill" rows="8" class="w-full px-1 py-1 rounded-lg "></textarea>
                         </div>
                     </section>
 
